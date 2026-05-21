@@ -5,15 +5,11 @@ import { useSearchParams, useRouter } from 'next/navigation';
 import { 
   Upload, 
   Sparkles, 
-  Check, 
   FileText, 
-  HelpCircle, 
   AlertTriangle, 
   Send,
   RefreshCw,
-  Search,
-  CheckCircle,
-  FileSpreadsheet
+  CheckCircle
 } from 'lucide-react';
 import { mockClaims, Claim } from '@/data/claimsData';
 

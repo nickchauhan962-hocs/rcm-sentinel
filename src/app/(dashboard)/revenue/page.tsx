@@ -4,10 +4,7 @@ import React, { useState } from 'react';
 import { 
   History, 
   Search, 
-  Filter, 
   ShieldCheck, 
-  TrendingUp, 
-  DollarSign, 
   Download,
   AlertTriangle,
   FolderOpen

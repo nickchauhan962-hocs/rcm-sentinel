@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Users, Search, Plus, ShieldCheck, Activity, Award } from 'lucide-react';
+import { Users, Search, Plus, Activity, Award } from 'lucide-react';
 
 interface Provider {
   npi: string;

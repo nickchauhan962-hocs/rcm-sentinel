@@ -12,8 +12,7 @@ import {
   MessageSquare,
   Sparkles,
   Zap,
-  Terminal,
-  Settings
+  Terminal
 } from 'lucide-react';
 import { mockAIAgents, AIAgent } from '@/data/mockAgents';
 
@@ -28,7 +27,7 @@ export default function AIAgentsPage() {
   useEffect(() => {
     // Set initial logs from mock data
     const initialLogs: Record<string, string[]> = {};
-    agents.forEach(agent => {
+    mockAIAgents.forEach(agent => {
       initialLogs[agent.id] = [...agent.logs];
     });
     setAgentLogs(initialLogs);
@@ -124,7 +123,6 @@ export default function AIAgentsPage() {
           <div className="space-y-3">
             {agents.map((agent) => {
               const isSelected = agent.id === selectedAgentId;
-              const isActive = agent.status === 'active';
               
               return (
                 <div 

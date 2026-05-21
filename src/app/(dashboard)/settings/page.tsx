@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Settings, ShieldCheck, Database, Key, CheckCircle, RefreshCw } from 'lucide-react';
+import { ShieldCheck, Database, Key, CheckCircle, RefreshCw } from 'lucide-react';
 
 export default function SettingsPage() {
   // FHIR Settings

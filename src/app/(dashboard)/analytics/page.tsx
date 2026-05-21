@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import dynamic from 'next/dynamic';
 import { 
   BarChart, 
   Bar, 
@@ -18,36 +17,12 @@ import {
   TrendingUp, 
   DollarSign, 
   AlertOctagon, 
-  Building2, 
-  CheckCircle,
-  HelpCircle,
-  ShieldCheck,
-  RefreshCw
+  Building2
 } from 'lucide-react';
 import { mockForecastingData, mockPayerHeatmap, mockPayerMetrics } from '@/data/claimsData';
 import MetricCard from '@/components/MetricCard';
 
-// Dynamically import Recharts containers
-const RechartsResponsiveContainer = dynamic(
-  () => import('recharts').then(mod => mod.ResponsiveContainer),
-  { ssr: false }
-);
-const RechartsLineChart = dynamic(
-  () => import('recharts').then(mod => mod.LineChart),
-  { ssr: false }
-);
-const RechartsLine = dynamic(
-  () => import('recharts').then(mod => mod.Line),
-  { ssr: false }
-);
-const RechartsBarChart = dynamic(
-  () => import('recharts').then(mod => mod.BarChart),
-  { ssr: false }
-);
-const RechartsBar = dynamic(
-  () => import('recharts').then(mod => mod.Bar),
-  { ssr: false }
-);
+
 
 export default function AnalyticsPage() {
   const [mounted, setMounted] = useState(false);
