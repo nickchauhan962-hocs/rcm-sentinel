@@ -1,0 +1,130 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #0f172a;
+  --card-bg: #ffffff;
+  --card-border: #e2e8f0;
+}
+
+@theme {
+  --color-brand-cyan: #2563eb;         /* Royal Swiss Blue */
+  --color-brand-cyan-light: #3b82f6;   /* Light Swiss Blue */
+  --color-brand-purple: #0f172a;       /* Deep Charcoal */
+  --color-brand-purple-light: #475569; /* Slate Gray */
+  --color-oled-black: #ffffff;         /* Pure White background */
+  --color-terminal-gray: #f8fafc;      /* Soft Gray */
+  --color-terminal-border: #e2e8f0;    /* Solid Divider Border */
+  
+  --font-mono: var(--font-geist-mono), "JetBrains Mono", Courier, monospace;
+}
+
+body {
+  background-color: #ffffff;
+  color: #0f172a;
+  font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Scrollbar for Light Theme */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Clean Swiss Grid Utility */
+.swiss-grid {
+  background-size: 24px 24px;
+  background-image: 
+    linear-gradient(to right, rgba(15, 23, 42, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.02) 1px, transparent 1px);
+}
+
+/* Swiss Panels */
+.glass-panel, .swiss-panel {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+}
+
+.glass-panel-cyan, .swiss-panel-blue {
+  background: #ffffff;
+  border: 1px solid rgba(37, 99, 235, 0.2);
+}
+
+.glass-panel-purple, .swiss-panel-charcoal {
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.2);
+}
+
+.glass-panel-green, .swiss-panel-green {
+  background: #ffffff;
+  border: 1px solid rgba(22, 163, 74, 0.2);
+}
+
+/* Solid Swiss Dots */
+.cyber-dot-cyan, .status-dot-blue {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #2563eb;
+}
+
+.cyber-dot-purple, .status-dot-charcoal {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #0f172a;
+}
+
+.cyber-dot-green, .status-dot-green {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #10b981;
+}
+
+.cyber-dot-red, .status-dot-red {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #ef4444;
+}
+
+/* Typography Helpers */
+.swiss-header {
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: #0f172a;
+}
+
+/* Custom styles for Recharts Tooltips in Light Theme */
+.recharts-default-tooltip {
+  background-color: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 4px !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03) !important;
+}
+
+.recharts-tooltip-label {
+  color: #0f172a !important;
+  font-weight: 700 !important;
+  font-size: 11px !important;
+  font-family: var(--font-geist-mono), monospace !important;
+}
+
+.recharts-tooltip-item {
+  font-size: 11px !important;
+  font-family: var(--font-geist-mono), monospace !important;
+}
